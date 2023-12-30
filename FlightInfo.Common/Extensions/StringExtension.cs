@@ -1,7 +1,4 @@
-﻿
-using System.Text.RegularExpressions;
-
-namespace FlightInfo.Common.Extensions
+﻿namespace FlightInfo.Common.Extensions
 {
     public static class StringExtension
     {
@@ -13,18 +10,5 @@ namespace FlightInfo.Common.Extensions
             }
             return str;
         }
-
-        //public static string FindAndReplace(this string str, string pattern, string replace)
-        //{
-        //    var regex = new Regex(pattern, RegexOptions.Compiled);
-
-        //    var matches = regex.Matches(str);
-
-        //    foreach (var match in matches) 
-        //    {
-            
-        //    }
-        //    return str;
-        //}
     }
 }

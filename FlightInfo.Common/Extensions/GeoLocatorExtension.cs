@@ -9,7 +9,6 @@ namespace FlightInfo.Common.Extensions
     {
         public static double DistanceTo(this Location from, Location to, DistanceUnitMeasuare distanceUnitMeasuare) 
         {
-
             var baseRad = Math.PI * from.Lat / 180;
             var targetRad = Math.PI * to.Lat / 180;
             var theta = from.Lon - to.Lon;
@@ -32,7 +31,6 @@ namespace FlightInfo.Common.Extensions
             }
 
             return dist;
-
         }
     }
 }

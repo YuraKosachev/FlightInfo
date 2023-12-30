@@ -34,7 +34,7 @@ namespace FlightInfo.Server.Code.Middleware
 
         private Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var statusCode = HttpStatusCode.InternalServerError; // 500 if unexpected
+            var statusCode = HttpStatusCode.InternalServerError;
             var errorList = new ErrorList();
 
             if (exception is BadApiRequestException)

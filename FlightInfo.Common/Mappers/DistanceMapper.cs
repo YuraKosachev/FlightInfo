@@ -23,7 +23,6 @@ namespace FlightInfo.Common.Mappers
                 IataTo = to.Iata,
                 Distance = from.Location.DistanceTo(to.Location, distanceUnitMeasuare),
                 DistanceUnitMeasuare = distanceUnitMeasuare
-
             };
 
             return result;
