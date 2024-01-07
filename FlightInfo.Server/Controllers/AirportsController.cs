@@ -1,16 +1,12 @@
-﻿using FlightInfo.Common.Interfaces.Services;
-using FlightInfo.Common.Models.Request;
-using FlightInfo.Common.Models.Response;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using FlightInfo.Common.Extensions;
-using FlightInfo.Common.Enums;
-using FlightInfo.Common.Models.View;
+﻿using FlightInfo.Common.Enums;
+using FlightInfo.Common.Interfaces.Services;
 using FlightInfo.Common.Models.Error;
-using System.Net;
+using FlightInfo.Common.Models.Request;
+using FlightInfo.Common.Models.View;
+using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
+using System.Net;
+using System.Threading.Tasks;
 
 namespace FlightInfo.Server.Controllers
 {

@@ -23,11 +23,12 @@ namespace FlightInfo.Logic.Services
 
         public async Task<AirportDistanceViewModel> GetAirportsDistance(AirportInfoRequest from, AirportInfoRequest to, DistanceUnitMeasuare distanceUnitMeasuare)
         {
-            var infoFrom = await _airportInfoByNameProvider.GetAirportInfoByNameAsync(from);
-            var infoTo = await _airportInfoByNameProvider.GetAirportInfoByNameAsync(to);
+            var infoFromTask = _airportInfoByNameProvider.GetAirportInfoByNameAsync(from);
+            var infoToTask = _airportInfoByNameProvider.GetAirportInfoByNameAsync(to);
 
-            return infoFrom.MapToDistance(infoTo, distanceUnitMeasuare);
+            await Task.WhenAll(infoFromTask, infoToTask);
 
+            return infoFromTask.Result.MapToDistance(infoToTask.Result, distanceUnitMeasuare);
         }
     }
 }
